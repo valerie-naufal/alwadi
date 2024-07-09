@@ -14,6 +14,7 @@ body {
   position: fixed;
   width: 100vw;
   z-index: -1;
+  top: -12%;
 
   img {
     position: fixed;
@@ -93,6 +94,17 @@ header {
   position: relative;
   display: flex;
   flex-direction: row;
+
+  .story {
+    display: flex;
+    flex-direction: row;
+    text-decoration-line: underline;
+    align-items: center;
+
+    a {
+      margin: 2%;
+    }
+  }
 
   .image-container {
     position: absolute;
@@ -195,6 +207,7 @@ header {
 .products {
   background-color: white;
   width: 100vw;
+  height: fit-content;
   margin-top: 0;
 
   h1 {
@@ -203,18 +216,44 @@ header {
     margin: 0;
   }
 
+  .view-more {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+
+    a {
+      color: white;
+      background-color: $theme-color-dark;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-radius: 30px;
+      padding: 1% 5%;
+    }
+
+    a:hover {
+      background-color: transparent;
+      color: $theme-color-dark;
+      border: 1px solid $theme-color-dark;
+      transition: 0.3s;
+    }
+  }
+
   .item {
     box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    margin: 0% 2%;
-    padding: 2%;
+    width: 80%;
 
     img {
-      width: 70px;
+      height: 198px;
     }
 
     .listingInfo {
+      padding: 24px 28px 40px;
       .title {
         color: $theme-color-dark;
         font-size: 12px;
@@ -224,7 +263,8 @@ header {
 
       .product-name {
         font-size: 22px;
-        font-weight: 500;
+        font-weight: bold;
+        line-height: 30px;
         margin-bottom: 30px;
       }
 
@@ -259,15 +299,15 @@ header {
 }
 
 .owl-carousel {
-  padding: 2%;
+  padding: 2% 2% 0 2%;
   width: 80%;
   overflow: hidden;
+  vertical-align: top;
 }
 
-.owl-orev,
+.owl-prev,
 .owl-next {
-  background-color: #333; /* Button background color */
-  color: #fff; /* Button text color */
+  color: $theme-color-dark;
   padding: 10px;
   border-radius: 50%; /* Make them circular */
   position: absolute;
@@ -277,19 +317,142 @@ header {
 }
 
 .owl-prev {
-  left: 10px; /* Position the previous button */
+  left: 10px;
 }
 
 .owl-next {
-  right: 10px; /* Position the next button */
+  right: 100px;
 }
 
 .recipes {
   background-color: $grey-bg;
-
+  padding: 2%;
   h1 {
     padding: 5% 0 0 5%;
     font-size: 50px;
     margin: 0;
+  }
+
+  .recipes-header {
+    position: relative;
+    .tabs {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      bottom: 0;
+      right: 15%;
+    }
+
+    a {
+      font-size: 12px;
+      border: 2px solid black;
+      border-radius: 25px;
+      background-color: black;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      display: inline-block;
+      padding: 5% 20%;
+      text-transform: uppercase;
+      margin: 3%;
+    }
+
+    a:hover {
+      color: black;
+      background-color: transparent;
+      transition: 0.3s;
+    }
+  }
+
+  .leaf1 {
+    position: absolute;
+    width: 100%;
+    img {
+      position: absolute;
+      float: right;
+    }
+  }
+  .view-more {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+
+    a {
+      color: white;
+      background-color: $theme-color-dark;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-radius: 30px;
+      padding: 1% 5%;
+    }
+
+    a:hover {
+      background-color: transparent;
+      color: $theme-color-dark;
+      border: 1px solid $theme-color-dark;
+      transition: 0.3s;
+    }
+  }
+
+  .recipe-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+
+    .recipe-item {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.08);
+      margin: 2%;
+      width: 25%;
+      height: 445px;
+
+      .recipeInfo {
+        padding: 5%;
+
+        .title {
+          font-size: 22px;
+          margin: 0;
+          font-weight: bold;
+        }
+
+        .description {
+          color: #7e7e7e;
+          font-size: 16px;
+        }
+      }
+
+      .properties {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-top: 0.5px solid #a1a1a1;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        div {
+          display: flex;
+          flex-direction: row;
+          margin: 2%;
+          color: #a1a1a1;
+          width: 50%;
+
+          p {
+            margin: 5%;
+            min-width: fit-content;
+          }
+        }
+      }
+    }
   }
 }

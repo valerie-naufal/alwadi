@@ -1,18 +1,19 @@
 $(document).ready(function () {
-  $(".owl-carousel").owlCarousel();
-});
-
-$(".owl-carousel").owlCarousel({
-  nav: true,
-  responsive: {
-    0: {
-      items: 1,
+  $(".owl-carousel").owlCarousel({
+    items: 1, // Number of items to display
+    nav: true, // Enable navigation buttons
+    navText: ["<", ">"], // Customize navigation text if needed
+    dots: true, // Enable pagination dot
+    responsive: {
+      0: {
+        items: 1, // Number of items to display on small screens
+      },
+      600: {
+        items: 3, // Number of items to display on medium screens
+      },
+      1000: {
+        items: 4, // Number of items to display on large screens
+      },
     },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 4,
-    },
-  },
+  });
 });
