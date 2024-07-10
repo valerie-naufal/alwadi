@@ -503,7 +503,7 @@ header {
 
 .presence {
   background-color: white;
-  padding-top: 10%;
+  padding: 7% 0%;
   width: 100%;
 
   h1 {
@@ -552,5 +552,85 @@ header {
     #AM {
       fill: rgba(0, 166, 81);
     }
+  }
+}
+
+.visit-lebanon {
+  position: relative;
+  .bg-container2 {
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+
+    img {
+      position: fixed;
+    }
+  }
+
+  a {
+    color: white;
+    background-color: #0c892e;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 14px;
+    border-radius: 30px;
+    padding: 1% 4%;
+  }
+
+  a:hover {
+    background-color: transparent;
+    color: $theme-color-dark;
+    border: 1px solid $theme-color-dark;
+    transition: 0.3s;
+  }
+
+  .text1 {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    margin: 10% 0 0 10%;
+
+    h1 {
+      font-size: 50px;
+      line-height: 70px;
+      margin-bottom: 26px;
+    }
+
+    p {
+      width: 49%;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 44px;
+      text-transform: none;
+    }
+  }
+}
+
+.work-with-us {
+  background-color: $grey-bg;
+  height: 50%;
+
+  h1 {
+    color: $theme-color-dark;
+    font-size: 50px;
+    line-height: 70px;
+    margin-bottom: 28px;
+  }
+
+  a {
+    color: white;
+    background-color: #0c892e;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 2% 9%;
+  }
+
+  a:hover {
+    background-color: transparent;
+    color: $theme-color-dark;
+    border: 1px solid $theme-color-dark;
+    transition: 0.3s;
   }
 }

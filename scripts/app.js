@@ -32,5 +32,4 @@ $(document).ready(function () {
   closePopup.onclick = () => {
     popupContainer.classList.remove("active");
   };
-
 });

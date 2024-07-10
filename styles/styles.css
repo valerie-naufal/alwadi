@@ -449,7 +449,7 @@ header {
 
 .presence {
   background-color: white;
-  padding-top: 10%;
+  padding: 7% 0%;
   width: 100%;
 }
 .presence h1 {
@@ -495,6 +495,77 @@ header {
 .presence .mapdiv #QA,
 .presence .mapdiv #AM {
   fill: rgb(0, 166, 81);
+}
+
+.visit-lebanon {
+  position: relative;
+}
+.visit-lebanon .bg-container2 {
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+.visit-lebanon .bg-container2 img {
+  position: fixed;
+}
+.visit-lebanon a {
+  color: white;
+  background-color: #0c892e;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 14px;
+  border-radius: 30px;
+  padding: 1% 4%;
+}
+.visit-lebanon a:hover {
+  background-color: transparent;
+  color: #0c892e;
+  border: 1px solid #0c892e;
+  transition: 0.3s;
+}
+.visit-lebanon .text1 {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  margin: 10% 0 0 10%;
+}
+.visit-lebanon .text1 h1 {
+  font-size: 50px;
+  line-height: 70px;
+  margin-bottom: 26px;
+}
+.visit-lebanon .text1 p {
+  width: 49%;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 44px;
+  text-transform: none;
+}
+
+.work-with-us {
+  background-color: rgb(238, 238, 238);
+  height: 50%;
+}
+.work-with-us h1 {
+  color: #0c892e;
+  font-size: 50px;
+  line-height: 70px;
+  margin-bottom: 28px;
+}
+.work-with-us a {
+  color: white;
+  background-color: #0c892e;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 2% 9%;
+}
+.work-with-us a:hover {
+  background-color: transparent;
+  color: #0c892e;
+  border: 1px solid #0c892e;
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=styles.css.map */
