@@ -16,4 +16,21 @@ $(document).ready(function () {
       },
     },
   });
+
+  const showPopup = document.getElementById("watch-video");
+  const popupContainer = document.getElementById("popup-container");
+  const closePopup = document.getElementById("close-btn");
+
+  console.log(showPopup);
+  console.log(popupContainer);
+  console.log(closePopup);
+
+  showPopup.onclick = () => {
+    popupContainer.classList.add("active");
+  };
+
+  closePopup.onclick = () => {
+    popupContainer.classList.remove("active");
+  };
+
 });

@@ -95,14 +95,58 @@ header {
   display: flex;
   flex-direction: row;
 
+  .popup-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgb(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+
+    .close-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .popup-box {
+      color: white;
+      width: 70%;
+      height: 70%;
+      border-radius: 15px;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .popop-container.active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
   .story {
     display: flex;
     flex-direction: row;
     text-decoration-line: underline;
     align-items: center;
 
-    a {
+    button {
       margin: 2%;
+      border: none;
+      color: white;
+      background-color: transparent;
+      text-decoration-line: underline;
+      font-size: 16px;
+      cursor: pointer;
     }
   }
 
@@ -453,6 +497,60 @@ header {
           }
         }
       }
+    }
+  }
+}
+
+.presence {
+  background-color: white;
+  padding-top: 10%;
+  width: 100%;
+
+  h1 {
+    font-size: 50px;
+    line-height: 70px;
+    padding-left: 7%;
+  }
+
+  .mapdiv {
+    margin: auto;
+
+    path {
+      fill: rgba(0, 166, 81, 0.2);
+      stroke: white;
+      stroke-width: 1px;
+    }
+
+    #Australia,
+    #Egypt,
+    #KSA,
+    #Oman,
+    #France,
+    #New-Zealand,
+    #Chile,
+    #United-States,
+    #Canada,
+    #United-Kingdom,
+    #IQ,
+    #LB,
+    #KW,
+    #AE,
+    #NL,
+    #ZA,
+    #BR,
+    #MX,
+    #SE,
+    #DE,
+    #BE,
+    #AT,
+    #CZ,
+    #ES,
+    #MA,
+    #GH,
+    #SA,
+    #QA,
+    #AM {
+      fill: rgba(0, 166, 81);
     }
   }
 }

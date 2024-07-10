@@ -85,14 +85,54 @@ header {
   display: flex;
   flex-direction: row;
 }
+.history .popup-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.history .popup-container .close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.history .popup-container .popup-box {
+  color: white;
+  width: 70%;
+  height: 70%;
+  border-radius: 15px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.history .popop-container.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
 .history .story {
   display: flex;
   flex-direction: row;
   text-decoration-line: underline;
   align-items: center;
 }
-.history .story a {
+.history .story button {
   margin: 2%;
+  border: none;
+  color: white;
+  background-color: transparent;
+  text-decoration-line: underline;
+  font-size: 16px;
+  cursor: pointer;
 }
 .history .image-container {
   position: absolute;
@@ -405,6 +445,56 @@ header {
 .recipes .recipe-container .recipe-item .properties div p {
   margin: 5%;
   min-width: fit-content;
+}
+
+.presence {
+  background-color: white;
+  padding-top: 10%;
+  width: 100%;
+}
+.presence h1 {
+  font-size: 50px;
+  line-height: 70px;
+  padding-left: 7%;
+}
+.presence .mapdiv {
+  margin: auto;
+}
+.presence .mapdiv path {
+  fill: rgba(0, 166, 81, 0.2);
+  stroke: white;
+  stroke-width: 1px;
+}
+.presence .mapdiv #Australia,
+.presence .mapdiv #Egypt,
+.presence .mapdiv #KSA,
+.presence .mapdiv #Oman,
+.presence .mapdiv #France,
+.presence .mapdiv #New-Zealand,
+.presence .mapdiv #Chile,
+.presence .mapdiv #United-States,
+.presence .mapdiv #Canada,
+.presence .mapdiv #United-Kingdom,
+.presence .mapdiv #IQ,
+.presence .mapdiv #LB,
+.presence .mapdiv #KW,
+.presence .mapdiv #AE,
+.presence .mapdiv #NL,
+.presence .mapdiv #ZA,
+.presence .mapdiv #BR,
+.presence .mapdiv #MX,
+.presence .mapdiv #SE,
+.presence .mapdiv #DE,
+.presence .mapdiv #BE,
+.presence .mapdiv #AT,
+.presence .mapdiv #CZ,
+.presence .mapdiv #ES,
+.presence .mapdiv #MA,
+.presence .mapdiv #GH,
+.presence .mapdiv #SA,
+.presence .mapdiv #QA,
+.presence .mapdiv #AM {
+  fill: rgb(0, 166, 81);
 }
 
 /*# sourceMappingURL=styles.css.map */
