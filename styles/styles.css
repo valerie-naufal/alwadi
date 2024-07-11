@@ -308,36 +308,43 @@ header {
   border: 1px solid #0c892e;
   transition: 0.3s;
 }
-.products .item {
+
+.owl-carousel {
+  padding: 2% 2% 0 2%;
+  width: 80%;
+  overflow: hidden;
+  vertical-align: top;
+}
+.owl-carousel .item {
   box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   width: 80%;
 }
-.products .item img {
+.owl-carousel .item img {
   height: 198px;
 }
-.products .item .listingInfo {
+.owl-carousel .item .listingInfo {
   padding: 24px 28px 40px;
 }
-.products .item .listingInfo .title {
+.owl-carousel .item .listingInfo .title {
   color: #0c892e;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
 }
-.products .item .listingInfo .product-name {
+.owl-carousel .item .listingInfo .product-name {
   font-size: 22px;
   font-weight: bold;
   line-height: 30px;
   margin-bottom: 30px;
 }
-.products .item .listingInfo .product-size {
+.owl-carousel .item .listingInfo .product-size {
   color: #7e7e7e;
   font-size: 16px;
   margin-bottom: 46px;
 }
-.products .item .listingInfo a {
+.owl-carousel .item .listingInfo a {
   border: 2px solid #0c892e;
   border-radius: 25px;
   color: #0c892e;
@@ -352,27 +359,27 @@ header {
   transition: 0.3;
   cursor: pointer;
 }
-.products .item .listingInfo a:hover {
+.owl-carousel .item .listingInfo a:hover {
   color: white;
   background-color: #0c892e;
   transition: 0.3s;
 }
 
-.prodocts-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.prodocts-container img {
-  width: 30px;
-  height: 30px;
+.owl-prev,
+.owl-next {
+  background-image: url(../images/arrow-left.svg);
+  background-color: #0c892e; /* Button background color */
+  padding: 10px;
+  border-radius: 50%; /* Make them circular */
+  position: absolute;
 }
 
-.owl-carousel {
-  padding: 2% 2% 0 2%;
-  width: 80%;
-  overflow: hidden;
-  vertical-align: top;
+.owl-prev {
+  left: 10px;
+}
+
+.owl-next {
+  right: 100px;
 }
 
 .recipes {

@@ -40,6 +40,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="scripts/app.js"></script>
   </head>
   <body>
@@ -128,128 +129,126 @@
 
     <section class="products">
       <h1>Products</h1>
-      <div class="products-container">
-        <div><img src="images/arrow-left.svg" /></div>
-        <div class="owl-carousel">
-          <div class="item">
-            <img src="images/hummus-tahina.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">Hummus Tahina</p>
-              <p class="product-size">180g, 400g, 850g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/hummus-tahina2.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">Hummus Tahina, Ready to Eat</p>
-              <p class="product-size">180g, 400g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/baba.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">
-                Baba Ghannouge (Moutabbal Batenjen), Ready To Eat
-              </p>
-              <p class="product-size">180g, 385g, 820g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/foul.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">
-                Foul Moudammas, Lebanese Recipe/ Ready to serve
-              </p>
-              <p class="product-size">400g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/foul2.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">
-                Foul Moudammas, Egyptian Recipe/ Ready to serve
-              </p>
-              <p class="product-size">400g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/beans.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">
-                Foul Moudammas, Hot Recipe/ Ready to serve
-              </p>
-              <p class="product-size">400g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/peeledfava.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">Peeled Fava Beans</p>
-              <p class="product-size">400g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/foul3.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">Foul Moudammas, In Brine</p>
-              <p class="product-size">400g, 860g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/beans2.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">Broad Fava Beans - Bajella</p>
-              <p class="product-size">400g, 860g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/beans3.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">Fava Beans with Chickpeas</p>
-              <p class="product-size">400g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/chickpeasbrine.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">Chickpeas, In Brine</p>
-              <p class="product-size">400g, 880g</p>
-              <a>Check Product</a>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/beans4.jpg" />
-            <div class="listingInfo">
-              <p class="title">Lebanese Specialities</p>
-              <p class="product-name">Red Kidney Beans, In Brine</p>
-              <p class="product-size">400g</p>
-              <a>Check Product</a>
-            </div>
+
+      <div class="owl-carousel">
+        <div class="item">
+          <img src="images/hummus-tahina.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">Hummus Tahina</p>
+            <p class="product-size">180g, 400g, 850g</p>
+            <a>Check Product</a>
           </div>
         </div>
-        <div><img src="images/arrow-right.svg"></div>
+        <div class="item">
+          <img src="images/hummus-tahina2.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">Hummus Tahina, Ready to Eat</p>
+            <p class="product-size">180g, 400g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/baba.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">
+              Baba Ghannouge (Moutabbal Batenjen), Ready To Eat
+            </p>
+            <p class="product-size">180g, 385g, 820g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/foul.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">
+              Foul Moudammas, Lebanese Recipe/ Ready to serve
+            </p>
+            <p class="product-size">400g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/foul2.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">
+              Foul Moudammas, Egyptian Recipe/ Ready to serve
+            </p>
+            <p class="product-size">400g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/beans.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">
+              Foul Moudammas, Hot Recipe/ Ready to serve
+            </p>
+            <p class="product-size">400g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/peeledfava.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">Peeled Fava Beans</p>
+            <p class="product-size">400g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/foul3.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">Foul Moudammas, In Brine</p>
+            <p class="product-size">400g, 860g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/beans2.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">Broad Fava Beans - Bajella</p>
+            <p class="product-size">400g, 860g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/beans3.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">Fava Beans with Chickpeas</p>
+            <p class="product-size">400g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/chickpeasbrine.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">Chickpeas, In Brine</p>
+            <p class="product-size">400g, 880g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/beans4.jpg" />
+          <div class="listingInfo">
+            <p class="title">Lebanese Specialities</p>
+            <p class="product-name">Red Kidney Beans, In Brine</p>
+            <p class="product-size">400g</p>
+            <a>Check Product</a>
+          </div>
+        </div>
       </div>
+
       <div class="view-more"><a>View ALL</a></div>
     </section>
 
@@ -2727,6 +2726,10 @@
         videoPage.classList.add("active");
         // $(".popup-container").fadeOut();
       }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
