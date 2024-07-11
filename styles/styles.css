@@ -38,11 +38,60 @@ header {
   padding-right: 20%;
   position: absolute;
 }
-.right p {
+.right a {
   margin: 3%;
   color: white;
   font-weight: bold;
   min-width: fit-content;
+  cursor: pointer;
+}
+.right a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+}
+.right .search-container {
+  display: flex;
+  align-items: center;
+}
+.right .search-container img {
+  padding-left: 10%;
+}
+
+.search-page {
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.search-page .close-img {
+  display: flex;
+  justify-content: right;
+  padding: 5%;
+}
+.search-page .close-img img {
+  color: #0c892e;
+  cursor: pointer;
+}
+.search-page .search-bar {
+  display: flex;
+  background-color: transparent;
+  color: #0c892e;
+  border-bottom: 2px solid #0c892e;
+  width: 80%;
+  padding: 0 0 1% 0.5%;
+  margin-left: 10%;
+}
+.search-page .search-bar input {
+  border: none;
+  background-color: transparent;
+  color: green;
+  font-size: 25px;
+}
+
+.search-page.active {
+  display: block;
 }
 
 .main-banner {
@@ -64,6 +113,7 @@ header {
   border-color: white;
   border-radius: 30px;
   padding: 1% 3%;
+  cursor: pointer;
 }
 .main-banner a:hover {
   background-color: transparent;
@@ -85,54 +135,23 @@ header {
   display: flex;
   flex-direction: row;
 }
-.history .popup-container {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-}
-.history .popup-container .close-btn {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.history .popup-container .popup-box {
-  color: white;
-  width: 70%;
-  height: 70%;
-  border-radius: 15px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.history .popop-container.active {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
 .history .story {
   display: flex;
   flex-direction: row;
   text-decoration-line: underline;
   align-items: center;
 }
-.history .story button {
+.history .story a {
   margin: 2%;
   border: none;
   color: white;
   background-color: transparent;
-  text-decoration-line: underline;
   font-size: 16px;
   cursor: pointer;
+}
+.history .story a:hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration-line: underline;
 }
 .history .image-container {
   position: absolute;
@@ -168,6 +187,39 @@ header {
   right: 6%;
   width: 20%;
   top: -20%;
+}
+
+.popup-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.popup-container .close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.popup-container .popup-box {
+  color: white;
+  width: 70%;
+  height: 70%;
+  border-radius: 15px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .textSnippet {
@@ -212,6 +264,7 @@ header {
   text-transform: uppercase;
   border-radius: 30px;
   padding: 2% 9%;
+  cursor: pointer;
 }
 .textSnippet .left-text a:hover {
   background-color: transparent;
@@ -247,6 +300,7 @@ header {
   text-transform: uppercase;
   border-radius: 30px;
   padding: 1% 5%;
+  cursor: pointer;
 }
 .products .view-more a:hover {
   background-color: transparent;
@@ -296,6 +350,7 @@ header {
   padding: 4px 10px;
   text-transform: uppercase;
   transition: 0.3;
+  cursor: pointer;
 }
 .products .item .listingInfo a:hover {
   color: white;
@@ -303,30 +358,21 @@ header {
   transition: 0.3s;
 }
 
+.prodocts-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.prodocts-container img {
+  width: 30px;
+  height: 30px;
+}
+
 .owl-carousel {
   padding: 2% 2% 0 2%;
   width: 80%;
   overflow: hidden;
   vertical-align: top;
-}
-
-.owl-prev,
-.owl-next {
-  color: #0c892e;
-  padding: 10px;
-  border-radius: 50%; /* Make them circular */
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.owl-prev {
-  left: 10px;
-}
-
-.owl-next {
-  right: 100px;
 }
 
 .recipes {
@@ -348,31 +394,25 @@ header {
   bottom: 0;
   right: 15%;
 }
-.recipes .recipes-header a {
+.recipes .recipes-header .tab-link {
   font-size: 12px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 25px;
-  background-color: black;
-  color: white;
+  color: black;
+  background-color: transparent;
   font-weight: 600;
   text-align: center;
   display: inline-block;
-  padding: 5% 20%;
+  padding: 7% 20%;
   text-transform: uppercase;
-  margin: 3%;
+  margin: 5%;
 }
-.recipes .recipes-header a:hover {
-  color: black;
-  background-color: transparent;
-  transition: 0.3s;
+.recipes .recipes-header .tab-link.active {
+  background-color: black;
+  color: white;
 }
-.recipes .leaf1 {
-  position: absolute;
-  width: 100%;
-}
-.recipes .leaf1 img {
-  position: absolute;
-  float: right;
+.recipes .recipes-header .tabcontent {
+  display: none;
 }
 .recipes .view-more {
   width: 100%;
@@ -390,6 +430,7 @@ header {
   text-transform: uppercase;
   border-radius: 30px;
   padding: 1% 5%;
+  cursor: pointer;
 }
 .recipes .view-more a:hover {
   background-color: transparent;
@@ -402,19 +443,29 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2%;
+  margin: 3% 0%;
 }
 .recipes .recipe-container .recipe-item {
   display: flex;
   flex-direction: column;
   background: white;
   box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.08);
-  margin: 2%;
-  width: 25%;
-  height: 445px;
+  margin: 0.5%;
+  width: 30%;
+  min-height: 545px;
+}
+.recipes .recipe-container .recipe-item .arrow-div {
+  padding-top: 10%;
+  position: relative;
+}
+.recipes .recipe-container .recipe-item .arrow-div img {
+  position: absolute;
+  right: 10%;
+  top: 50%;
 }
 .recipes .recipe-container .recipe-item .recipeInfo {
-  padding: 5%;
+  padding: 0 5% 5% 5%;
+  height: 30%;
 }
 .recipes .recipe-container .recipe-item .recipeInfo .title {
   font-size: 22px;
@@ -424,23 +475,24 @@ header {
 .recipes .recipe-container .recipe-item .recipeInfo .description {
   color: #7e7e7e;
   font-size: 16px;
+  text-transform: none;
 }
 .recipes .recipe-container .recipe-item .properties {
   display: flex;
   flex-direction: row;
   width: 100%;
   border-top: 0.5px solid #a1a1a1;
-}
-.recipes .recipe-container .recipe-item .properties img {
-  width: 30px;
-  height: 30px;
+  justify-content: right;
 }
 .recipes .recipe-container .recipe-item .properties div {
   display: flex;
   flex-direction: row;
-  margin: 2%;
+  margin: 5%;
   color: #a1a1a1;
-  width: 50%;
+}
+.recipes .recipe-container .recipe-item .properties div img {
+  width: 30px;
+  height: 30px;
 }
 .recipes .recipe-container .recipe-item .properties div p {
   margin: 5%;
@@ -452,10 +504,34 @@ header {
   padding: 7% 0%;
   width: 100%;
 }
-.presence h1 {
+.presence .header-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+}
+.presence .header-container h1 {
   font-size: 50px;
   line-height: 70px;
   padding-left: 7%;
+}
+.presence .header-container a {
+  position: absolute;
+  right: 4%;
+  color: white;
+  background-color: #0c892e;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 14px;
+  border-radius: 30px;
+  padding: 1% 4%;
+  cursor: pointer;
+}
+.presence .header-container a:hover {
+  background-color: transparent;
+  color: #0c892e;
+  border: 1px solid #0c892e;
+  transition: 0.3s;
 }
 .presence .mapdiv {
   margin: auto;
@@ -497,18 +573,35 @@ header {
   fill: rgb(0, 166, 81);
 }
 
-.visit-lebanon {
-  position: relative;
+.visit-lebanon .outer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/lebanonView.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-.visit-lebanon .bg-container2 {
-  width: 100vw;
-  position: absolute;
-  z-index: -1;
+.visit-lebanon .outer-container .visit {
+  background-color: transparent;
+  color: white;
+  margin: 30% 0% 10% 0%;
+  padding-left: 10%;
 }
-.visit-lebanon .bg-container2 img {
-  position: fixed;
+.visit-lebanon .outer-container .visit h1 {
+  font-size: 50px;
+  line-height: 70px;
+  margin-bottom: 26px;
 }
-.visit-lebanon a {
+.visit-lebanon .outer-container .visit p {
+  width: 49%;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 44px;
+  text-transform: none;
+}
+.visit-lebanon .outer-container .visit a {
   color: white;
   background-color: #0c892e;
   font-weight: bold;
@@ -516,56 +609,136 @@ header {
   font-size: 14px;
   border-radius: 30px;
   padding: 1% 4%;
+  cursor: pointer;
 }
-.visit-lebanon a:hover {
+.visit-lebanon .outer-container .visit a:hover {
   background-color: transparent;
   color: #0c892e;
   border: 1px solid #0c892e;
   transition: 0.3s;
 }
-.visit-lebanon .text1 {
-  position: absolute;
-  z-index: 1;
-  color: white;
-  margin: 10% 0 0 10%;
-}
-.visit-lebanon .text1 h1 {
-  font-size: 50px;
-  line-height: 70px;
-  margin-bottom: 26px;
-}
-.visit-lebanon .text1 p {
-  width: 49%;
-  font-size: 18px;
-  line-height: 30px;
-  margin-bottom: 44px;
-  text-transform: none;
-}
-
-.work-with-us {
+.visit-lebanon .outer-container .work {
   background-color: rgb(238, 238, 238);
-  height: 50%;
+  padding: 5% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.work-with-us h1 {
+.visit-lebanon .outer-container .work h1 {
   color: #0c892e;
   font-size: 50px;
   line-height: 70px;
   margin-bottom: 28px;
 }
-.work-with-us a {
+.visit-lebanon .outer-container .work p {
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.visit-lebanon .outer-container .work a {
   color: white;
   background-color: #0c892e;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
   border-radius: 30px;
-  padding: 2% 9%;
+  padding: 1% 5%;
+  cursor: pointer;
 }
-.work-with-us a:hover {
+.visit-lebanon .outer-container .work a:hover {
   background-color: transparent;
   color: #0c892e;
   border: 1px solid #0c892e;
   transition: 0.3s;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 2% 0%;
+}
+.footer .img-dv {
+  padding: 2% 7%;
+}
+.footer .text-container1,
+.footer .text-container2,
+.footer .text-container3 {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 3%;
+  min-width: max-content;
+}
+.footer a {
+  color: #7e7e7e;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 3%;
+  width: 100%;
+  cursor: pointer;
+}
+.footer a:hover {
+  color: #a1a1a1;
+  transition: 0.3s;
+}
+.footer .media {
+  width: 15%;
+  padding-left: 5%;
+  padding-top: 2%;
+}
+.footer .media button {
+  width: 100%;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.footer .media button:hover {
+  transform: translateY(5px);
+}
+.footer .media .button-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #0c892e;
+  color: white;
+}
+.footer .media .icons {
+  display: flex;
+  justify-content: center;
+  padding-top: 7%;
+}
+.footer .media .icons img {
+  margin: 4%;
+  cursor: pointer;
+}
+
+.post-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #0c892e;
+  background-color: white;
+  font-size: 12px;
+  padding-bottom: 2%;
+  padding-left: 5%;
+}
+.post-footer p,
+.post-footer a {
+  padding: 0% 2%;
+  cursor: pointer;
+}
+.post-footer a {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */

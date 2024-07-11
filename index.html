@@ -50,18 +50,28 @@
             <img src="images/alwadiLogo.svg" />
           </div>
           <div class="right">
-            <p>About Us</p>
-            <p>Prodcuts</p>
-            <p>Recipes</p>
-            <p>Our Partners</p>
-            <p>Visit Lebanon</p>
-            <p>Contact</p>
-            <p>Online Stores</p>
-            <p>Search</p>
+            <a>About Us</a>
+            <a>Prodcuts</a>
+            <a>Recipes</a>
+            <a>Our Partners</a>
+            <a>Visit Lebanon</a>
+            <a>Contact</a>
+            <a>Online Stores</a>
+            <div class="search-container">
+              <a onclick="openSearch(event)">Search</a
+              ><img src="images/search.svg" />
+            </div>
           </div>
         </div>
       </div>
     </header>
+
+    <div class="search-page" id="search-page">
+      <div class="close-img">
+        <img onclick="closeSearch(event)" src="images/close.svg" />
+      </div>
+      <div class="search-bar"><input type="text" value="Search" /></div>
+    </div>
 
     <section class="main-banner">
       <div><img src="images/plate.jpg" class="bg-container" /></div>
@@ -75,14 +85,6 @@
     </section>
 
     <section class="history">
-      <div class="popup-container" id="popup-container">
-        <button class="close-btn" id="close-btn">
-          <img src="images/close.svg" />
-        </button>
-        <div class="popup-box">
-          <h1>hello world</h1>
-        </div>
-      </div>
       <div class="image-container"><img src="images/15HistoryImage.jpg" /></div>
       <div class="text2">
         <h1>Since 1979</h1>
@@ -93,12 +95,21 @@
           the world.
         </p>
         <div class="story">
-          <button class="watch-video" id="watch-video">Watch The Story</button>
+          <a onclick="showVideo(event)"> Watch The Story </a>
           <img src="images/play.svg" />
         </div>
       </div>
       <div class="seeds"><img src="images/seeds.png" /></div>
     </section>
+
+    <div class="popup-container" id="popup-container">
+      <div class="close-btn">
+        <img src="images/close.svg" onclick="hideVideo(event)" />
+      </div>
+      <div class="popup-box">
+        <h1>hello world</h1>
+      </div>
+    </div>
 
     <section class="textSnippet">
       <div class="right-pomegranate">
@@ -117,123 +128,127 @@
 
     <section class="products">
       <h1>Products</h1>
-      <div class="owl-carousel">
-        <div class="item">
-          <img src="images/hummus-tahina.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">Hummus Tahina</p>
-            <p class="product-size">180g, 400g, 850g</p>
-            <a>Check Product</a>
+      <div class="products-container">
+        <div><img src="images/arrow-left.svg" /></div>
+        <div class="owl-carousel">
+          <div class="item">
+            <img src="images/hummus-tahina.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">Hummus Tahina</p>
+              <p class="product-size">180g, 400g, 850g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/hummus-tahina2.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">Hummus Tahina, Ready to Eat</p>
+              <p class="product-size">180g, 400g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/baba.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">
+                Baba Ghannouge (Moutabbal Batenjen), Ready To Eat
+              </p>
+              <p class="product-size">180g, 385g, 820g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/foul.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">
+                Foul Moudammas, Lebanese Recipe/ Ready to serve
+              </p>
+              <p class="product-size">400g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/foul2.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">
+                Foul Moudammas, Egyptian Recipe/ Ready to serve
+              </p>
+              <p class="product-size">400g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/beans.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">
+                Foul Moudammas, Hot Recipe/ Ready to serve
+              </p>
+              <p class="product-size">400g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/peeledfava.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">Peeled Fava Beans</p>
+              <p class="product-size">400g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/foul3.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">Foul Moudammas, In Brine</p>
+              <p class="product-size">400g, 860g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/beans2.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">Broad Fava Beans - Bajella</p>
+              <p class="product-size">400g, 860g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/beans3.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">Fava Beans with Chickpeas</p>
+              <p class="product-size">400g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/chickpeasbrine.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">Chickpeas, In Brine</p>
+              <p class="product-size">400g, 880g</p>
+              <a>Check Product</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/beans4.jpg" />
+            <div class="listingInfo">
+              <p class="title">Lebanese Specialities</p>
+              <p class="product-name">Red Kidney Beans, In Brine</p>
+              <p class="product-size">400g</p>
+              <a>Check Product</a>
+            </div>
           </div>
         </div>
-        <div class="item">
-          <img src="images/hummus-tahina2.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">Hummus Tahina, Ready to Eat</p>
-            <p class="product-size">180g, 400g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/baba.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">
-              Baba Ghannouge (Moutabbal Batenjen), Ready To Eat
-            </p>
-            <p class="product-size">180g, 385g, 820g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/foul.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">
-              Foul Moudammas, Lebanese Recipe/ Ready to serve
-            </p>
-            <p class="product-size">400g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/foul2.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">
-              Foul Moudammas, Egyptian Recipe/ Ready to serve
-            </p>
-            <p class="product-size">400g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/beans.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">
-              Foul Moudammas, Hot Recipe/ Ready to serve
-            </p>
-            <p class="product-size">400g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/peeledfava.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">Peeled Fava Beans</p>
-            <p class="product-size">400g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/foul3.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">Foul Moudammas, In Brine</p>
-            <p class="product-size">400g, 860g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/beans2.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">Broad Fava Beans - Bajella</p>
-            <p class="product-size">400g, 860g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/beans3.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">Fava Beans with Chickpeas</p>
-            <p class="product-size">400g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/chickpeasbrine.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">Chickpeas, In Brine</p>
-            <p class="product-size">400g, 880g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
-        <div class="item">
-          <img src="images/beans4.jpg" />
-          <div class="listingInfo">
-            <p class="title">Lebanese Specialities</p>
-            <p class="product-name">Red Kidney Beans, In Brine</p>
-            <p class="product-size">400g</p>
-            <a>Check Product</a>
-          </div>
-        </div>
+        <div><img src="images/arrow-right.svg"></div>
       </div>
       <div class="view-more"><a>View ALL</a></div>
     </section>
@@ -242,69 +257,146 @@
       <div class="recipes-header">
         <h1>Recipes</h1>
         <div class="tabs">
-          <a>LATEST</a>
-          <a>RECOMMENDED</a>
+          <button class="tab-link" onclick="openTab(event, 'latest')">
+            LATEST
+          </button>
+          <button class="tab-link" onclick="openTab(event, 'recommended')">
+            RECOMMENDED
+          </button>
         </div>
       </div>
-      <div class="recipe-container">
-        <div class="recipe-item">
-          <img src="images/mafrouke.jpg" />
-          <div class="recipeInfo">
-            <p class="title">Mafrouke Truffles</p>
-            <p class="description">
-              Chocolate Truffles is great, but have you ever tried Mafroukeh
-              Truffles?
-            </p>
-          </div>
-          <div class="properties">
-            <div>
-              <img src="images/stopwatch.svg" />
-              <p>30 mins</p>
+      <div class="tabcontent" id="latest">
+        <div class="recipe-container">
+          <div class="recipe-item">
+            <img src="images/mafrouke.jpg" />
+            <div class="arrow-div"><img src="images/arrow.svg" /></div>
+            <div class="recipeInfo">
+              <p class="title">Mafrouke Truffles</p>
+              <p class="description">
+                Chocolate Truffles is great, but have you ever tried Mafroukeh
+                Truffles?
+              </p>
             </div>
-            <div>
-              <img src="images/bowl.svg" />
-              <p>Beginner</p>
+            <div class="properties">
+              <div>
+                <img src="images/stopwatch.svg" />
+                <p>30 mins</p>
+              </div>
+              <div>
+                <img src="images/bowl.svg" />
+                <p>Beginner</p>
+              </div>
+            </div>
+          </div>
+          <div class="recipe-item">
+            <img src="images/freekeh.jpg" />
+            <div class="arrow-div"><img src="images/arrow.svg" /></div>
+            <div class="recipeInfo">
+              <p class="title">Freekeh Risotto</p>
+              <p class="description">
+                Try this quick recipe for a healthy meal full of fresh organic
+                green veggies with a subtle Parmesan saltiness.
+              </p>
+            </div>
+            <div class="properties">
+              <div>
+                <img src="images/stopwatch.svg" />
+                <p>15 mins</p>
+              </div>
+              <div>
+                <img src="images/bowl.svg" />
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="recipe-item">
+            <img src="images/potato.jpg" />
+            <div class="arrow-div"><img src="images/arrow.svg" /></div>
+            <div class="recipeInfo">
+              <p class="title">Potato Galette</p>
+              <p class="description">
+                This Potato Galette recipe prepared with our ready to go
+                Shortcrust Pastry is the perfect comfort food after a long day
+                of tasting!
+              </p>
+            </div>
+            <div class="properties">
+              <div>
+                <img src="images/stopwatch.svg" />
+                <p>20 mins</p>
+              </div>
+              <div>
+                <img src="images/bowl.svg" />
+                <p></p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="recipe-item">
-          <img src="images/freekeh.jpg" />
-          <div class="recipeInfo">
-            <p class="title">Freekeh Risotto</p>
-            <p class="description">
-              Try this quick recipe for a healthy meal full of fresh organic
-              green veggies with a subtle Parmesan saltiness.
-            </p>
-          </div>
-          <div class="properties">
-            <div>
-              <img src="images/stopwatch.svg" />
-              <p>15 mins</p>
+      </div>
+      <div class="tabcontent" id="recommended">
+        <div class="recipe-container">
+          <div class="recipe-item">
+            <img src="images/asrtichoke.jpg" />
+            <div class="arrow-div"><img src="images/arrow.svg" /></div>
+            <div class="recipeInfo">
+              <p class="title">Artichoke Soup With Parmesan Crsips</p>
+              <p class="description">
+                A uniquely sweet and flavourful soup made with artichoke for its
+                crunchy taste!
+              </p>
             </div>
-            <div>
-              <img src="images/bowl.svg" />
-              <p></p>
+            <div class="properties">
+              <div>
+                <img src="images/stopwatch.svg" />
+                <p>15 mins</p>
+              </div>
+              <div>
+                <img src="images/bowl.svg" />
+                <p>Beginner</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="recipe-item">
-          <img src="images/potato.jpg" />
-          <div class="recipeInfo">
-            <p class="title">Potato Galette</p>
-            <p class="description">
-              This Potato Galette recipe prepared with our ready to go
-              Shortcrust Pastry is the perfect comfort food after a long day of
-              tasting!
-            </p>
-          </div>
-          <div class="properties">
-            <div>
-              <img src="images/stopwatch.svg" />
-              <p>20 mins</p>
+          <div class="recipe-item">
+            <img src="images/ashtaliye.jpg" />
+            <div class="arrow-div"><img src="images/arrow.svg" /></div>
+            <div class="recipeInfo">
+              <p class="title">Ahstaliyeh</p>
+              <p class="title" style="margin: 0; padding: 0">(Cream Pudding)</p>
+              <p class="description">
+                A Lebanese traditional cream pudding flavored with rose water
+                and orange blossom water.
+              </p>
             </div>
-            <div>
-              <img src="images/bowl.svg" />
-              <p></p>
+            <div class="properties">
+              <div>
+                <img src="images/stopwatch.svg" />
+                <p>20 mins</p>
+              </div>
+              <div>
+                <img src="images/bowl.svg" />
+                <p>Beginner</p>
+              </div>
+            </div>
+          </div>
+          <div class="recipe-item">
+            <img src="images/burghul.jpg" />
+            <div class="arrow-div"><img src="images/arrow.svg" /></div>
+            <div class="recipeInfo">
+              <p class="title">Burghul Bi Dfeen</p>
+              <p class="description">
+                A healthy and nourishing bulgur and chickpeas stew served with
+                yogurt.
+              </p>
+            </div>
+            <div class="properties">
+              <div>
+                <img src="images/stopwatch.svg" />
+                <p>45 mins</p>
+              </div>
+              <div>
+                <img src="images/bowl.svg" />
+                <p></p>
+              </div>
             </div>
           </div>
         </div>
@@ -313,7 +405,11 @@
     </section>
 
     <section class="presence">
-      <h1>Al Wadi's Presence</h1>
+      <div class="header-container">
+        <h1>Al Wadi's Presence</h1>
+        <a>Learn More</a>
+      </div>
+
       <div class="mapdiv">
         <svg
           version="1.2"
@@ -2519,29 +2615,118 @@
     </section>
 
     <section class="visit-lebanon">
-      <div><img src="images/lebanonView.jpg" class="bg-container2" /></div>
-      <div class="text1">
-        <h1>Visit Lebanon</h1>
-        <p>
-          Delicious, nutritious, and flavorful are a few words that describe
-          Lebanese cuisine. Its culinary richness always provides a memorable
-          encounter at the table. Its delightful flavors win over the hearts
-          (and stomachs) of food lovers worldwide. Each bite will whisk you off
-          your feet and embark you on a journey throughout Lebanon in all its
-          succulent splendor. Renowned for its hospitality and generosity, the
-          Lebanese culinary experience will introduce you to a whole new way of
-          enjoying food.
-        </p>
-        <a>Discover More</a>
+      <div class="outer-container">
+        <div class="visit">
+          <h1>Visit Lebanon</h1>
+          <p>
+            Delicious, nutritious, and flavorful are a few words that describe
+            Lebanese cuisine. Its culinary richness always provides a memorable
+            encounter at the table. Its delightful flavors win over the hearts
+            (and stomachs) of food lovers worldwide. Each bite will whisk you
+            off your feet and embark you on a journey throughout Lebanon in all
+            its succulent splendor. Renowned for its hospitality and generosity,
+            the Lebanese culinary experience will introduce you to a whole new
+            way of enjoying food.
+          </p>
+          <a>Discover More</a>
+        </div>
+
+        <div class="work">
+          <h1>Work with us</h1>
+          <p>Are you a talented candidate and want to work with us?</p>
+          <a>Apply Here</a>
+        </div>
       </div>
     </section>
 
-    <section class="work-with-us">
-      <div>
-        <h1>Work with us</h1>
-        <p>Are you a talented candidate and want to work with us?</p>
-        <a>Apply Here</a>
+    <section class="footer">
+      <div class="img-dv"><img src="images/alwadiLogo.svg" /></div>
+      <div class="text-container1">
+        <a>About Us</a>
+        <a>Products</a>
+        <a>Recipes</a>
+      </div>
+      <div class="text-container2">
+        <a>Our Partners</a>
+        <a>Visit Lebanon</a>
+        <a>Online Stores</a>
+      </div>
+      <div class="text-container3">
+        <a>Contact</a>
+        <a>Careers</a>
+      </div>
+      <div class="media">
+        <button>
+          <div class="button-content">
+            <p>dowload catalogue</p>
+            <img src="images/download.svg" />
+          </div>
+        </button>
+        <div class="icons">
+          <img src="images/facebook.svg" />
+          <img src="images/linkedin.svg" />
+          <img src="images/youtube.svg" />
+          <img src="images/instagram.svg" />
+        </div>
       </div>
     </section>
+
+    <section class="post-footer">
+      <p>Copyright 2024. Al Wadi Al Akhdar</p>
+      <a> Terms & Conditions </a>
+      <a> Privacy Policy</a>
+    </section>
+
+    <script>
+      let latestTab = document.getElementById("latest");
+      let recommendedTab = document.getElementById("recommended");
+
+      window.onload = () => {
+        document.getElementById("latest").style.display = "flex";
+        document.getElementById("recommended").style.display = "none";
+        let tabs = document.getElementsByClassName("tab-link");
+        tabs[0].className += " active";
+      };
+
+      function openTab(event, tabname) {
+        var i, tabcontent, tabs;
+        tabcontent = document.getElementsByClassName("tabcontent");
+
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        tabs = document.getElementsByClassName("tab-link");
+
+        for (i = 0; i < tabs.length; i++) {
+          tabs[i].className = tabs[i].className.replace(" active", "");
+        }
+        console.log(document.getElementById(tabname));
+        document.getElementById(tabname).style.display = "flex";
+        event.currentTarget.className += " active";
+      }
+
+      function openSearch(event) {
+        // const searchPage = document.getElementById("search-page");
+        // searchPage.classList.add("active");
+        $(".search-page").fadeIn();
+      }
+
+      function closeSearch(event) {
+        $(".search-page").fadeOut();
+      }
+
+      function showVideo(event) {
+        const videoPage = document.getElementById("popup-container");
+        videoPage.classList.add("active");
+        // $(".popup-container").fadeIn();
+      }
+
+      function hideVideo(event) {
+        const videoPage = document.getElementById("popup-container");
+        videoPage.classList.add("active");
+        // $(".popup-container").fadeOut();
+      }
+    </script>
   </body>
 </html>
