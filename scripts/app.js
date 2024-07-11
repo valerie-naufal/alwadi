@@ -17,6 +17,10 @@ $(document).ready(function () {
     },
   });
 
+  $(function () {
+    $(".tooltip").tooltip();
+  });
+
   const showPopup = document.getElementById("watch-video");
   const popupContainer = document.getElementById("popup-container");
   const closePopup = document.getElementById("close-btn");
