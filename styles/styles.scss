@@ -1,7 +1,7 @@
 $theme-color: #00a651;
 $theme-color-dark: #0c892e;
 $theme-font: "Poppins";
-$grey-bg: rgb(238, 238, 238);
+$grey-bg: rgb(247, 244, 244);
 
 body {
   font-family: $theme-font;
@@ -45,7 +45,7 @@ header {
   position: absolute;
 
   a {
-    margin: 3%;
+    margin: 2%;
     color: white;
     font-weight: bold;
     min-width: fit-content;
@@ -53,15 +53,39 @@ header {
   }
 
   a:hover {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(white, 0.5);
     transition: 0.3s;
   }
 
   .search-container {
     display: flex;
     align-items: center;
+    padding-left: 3%;
+    border-left: 1px solid rgba(white, 0.5);
     img {
       padding-left: 10%;
+    }
+  }
+
+  .lang {
+    display: flex;
+    align-items: center;
+    padding-right: 2%;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    select {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 16px;
+
+      option {
+        background-color: transparent;
+      }
     }
   }
 }
@@ -103,10 +127,6 @@ header {
   }
 }
 
-.search-page.active {
-  display: block;
-}
-
 .main-banner {
   height: 100vh;
   p {
@@ -131,8 +151,8 @@ header {
 
   a:hover {
     background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    color: rgba(white, 0.5);
+    border: 1px solid rgba(white, 0.5);
     transition: 0.3s;
   }
 
@@ -167,8 +187,9 @@ header {
     }
 
     a:hover {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(white, 0.7);
       text-decoration-line: underline;
+      transition: 0.2s;
     }
   }
 
@@ -214,32 +235,32 @@ header {
 }
 
 .video-page {
-  background-color: rgba(0,0,0,0.5);
-  position:fixed;
-  top:0;
-  left:0;
-  z-index:100;
-  width:100%;
-  height:100%;
-  display:none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: none;
 
-  iframe{
-    position:absolute;
-    width:70%;
-    height:70%;
-    top:15%;
-    left:15%;
+  iframe {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
   }
-  
-  span{
-    position:absolute;
-    top:5px;
-    right:40px;
+
+  span {
+    position: absolute;
+    top: 5px;
+    right: 40px;
     font-size: 50px;
     font-weight: bolder;
-    color:white;
-    z-index:100;
-    cursor:pointer;
+    color: white;
+    z-index: 100;
+    cursor: pointer;
   }
 }
 
@@ -370,6 +391,11 @@ header {
 
     img {
       height: 198px;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      transition: 0.5s ease-in-out;
     }
 
     .listingInfo {
@@ -529,6 +555,11 @@ header {
       width: 30%;
       min-height: 545px;
 
+      img:hover {
+        transform: scale(1.02);
+        transition: 0.5s ease-in-out;
+      }
+
       .arrow-div {
         padding-top: 10%;
         position: relative;
@@ -675,6 +706,7 @@ header {
     #MA,
     #GH,
     #SA,
+    #EG,
     #QA,
     #AM {
       fill: rgba(0, 166, 81);
@@ -840,11 +872,14 @@ header {
 
     .icons {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       padding-top: 7%;
 
+      a {
+        max-width: fit-content;
+      }
+
       img {
-        margin: 4%;
         cursor: pointer;
       }
     }
@@ -864,10 +899,14 @@ header {
   p,
   a {
     padding: 0% 2%;
-    cursor: pointer;
   }
 
   a {
     text-decoration: underline;
+    cursor: pointer;
+  }
+  a:hover {
+    color: rgba($theme-color-dark, 0.7);
+    transition: 0.2s;
   }
 }
