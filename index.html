@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Al Wadi</title>
+    <title>Home | Al Wadi Al Akhdar</title>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -96,20 +96,16 @@
           the world.
         </p>
         <div class="story">
-          <a onclick="showVideo(event)"> Watch The Story </a>
+          <a onclick="openVideo(event)"> Watch The Story </a>
           <img src="images/play.svg" />
         </div>
       </div>
       <div class="seeds"><img src="images/seeds.png" /></div>
     </section>
 
-    <div class="popup-container" id="popup-container">
-      <div class="close-btn">
-        <img src="images/close.svg" onclick="hideVideo(event)" />
-      </div>
-      <div class="popup-box">
-        <h1>hello world</h1>
-      </div>
+    <div class="video-page" id="video-page">
+      <span onclick="closeVideo(event)">&times;</span>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/g7nJTpmvzO4?si=0WpiG5TuewVGA7rc?autoplay=0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <section class="textSnippet">
@@ -117,7 +113,7 @@
         <img src="images/seeds2.png" class="top-image" />
         <img src="images/pomegranate.png" class="bottom-image" />
       </div>
-      <div class="left-text">
+      <div class="left-text" data-aos="fade-up">
         <p>
           Born out of a love for our culinary heritage, we have established
           ourselves as experts in the Lebanese table. Quality and consistency
@@ -131,7 +127,7 @@
       <h1>Products</h1>
       <div class="leaf1"><img src="images/leaf1.png" /></div>
       <div class="owl-carousel">
-        <div class="item">
+        <div class="item" data-aos="fade-up">
           <img src="images/hummus-tahina.jpg" />
           <div class="listingInfo">
             <p class="title">Lebanese Specialities</p>
@@ -140,7 +136,7 @@
             <a>Check Product</a>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up" data-aos-duration="1000">
           <img src="images/hummus-tahina2.jpg" />
           <div class="listingInfo">
             <p class="title">Lebanese Specialities</p>
@@ -149,7 +145,7 @@
             <a>Check Product</a>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up" data-aos-duration="2000">
           <img src="images/baba.jpg" />
           <div class="listingInfo">
             <p class="title">Lebanese Specialities</p>
@@ -160,7 +156,7 @@
             <a>Check Product</a>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up" data-aos-duration="3000">
           <img src="images/foul.jpg" />
           <div class="listingInfo">
             <p class="title">Lebanese Specialities</p>
@@ -257,7 +253,7 @@
         <img src="images/leaf2.png" />
       </div>
       <div class="chickpeas"><img src="images/chickpeas.png" /></div>
-      <div class="recipes-header">
+      <div class="recipes-header" data-aos="fade-up">
         <h1>Recipes</h1>
         <div class="tabs">
           <button class="tab-link" onclick="openTab(event, 'latest')">
@@ -268,7 +264,12 @@
           </button>
         </div>
       </div>
-      <div class="tabcontent" id="latest">
+      <div
+        class="tabcontent"
+        id="latest"
+        data-aos="fade-up"
+        data-aos-duration="500"
+      >
         <div class="recipe-container">
           <div class="recipe-item">
             <img src="images/mafrouke.jpg" />
@@ -2710,8 +2711,6 @@
       }
 
       function openSearch(event) {
-        // const searchPage = document.getElementById("search-page");
-        // searchPage.classList.add("active");
         $(".search-page").fadeIn();
       }
 
@@ -2719,16 +2718,12 @@
         $(".search-page").fadeOut();
       }
 
-      function showVideo(event) {
-        const videoPage = document.getElementById("popup-container");
-        videoPage.classList.add("active");
-        // $(".popup-container").fadeIn();
+      function openVideo(event) {
+        $(".video-page").show();
       }
 
-      function hideVideo(event) {
-        const videoPage = document.getElementById("popup-container");
-        videoPage.classList.add("active");
-        // $(".popup-container").fadeOut();
+      function closeVideo(event) {
+        $(".video-page").hide();
       }
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
