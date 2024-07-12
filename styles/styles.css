@@ -278,6 +278,7 @@ header {
   width: 100vw;
   height: fit-content;
   margin-top: 0;
+  padding-bottom: 5%;
 }
 .products h1 {
   padding: 5% 0 0 5%;
@@ -309,6 +310,19 @@ header {
   transition: 0.3s;
 }
 
+.leaf1 {
+  position: absolute;
+  width: 100%;
+  justify-content: right;
+}
+.leaf1 img {
+  position: absolute;
+  right: 0;
+  top: 490px;
+  width: 12%;
+  z-index: 0;
+}
+
 .owl-carousel {
   padding: 2% 2% 0 2%;
   width: 80%;
@@ -320,6 +334,7 @@ header {
   display: flex;
   flex-direction: column;
   width: 80%;
+  height: 540px;
 }
 .owl-carousel .item img {
   height: 198px;
@@ -376,15 +391,22 @@ header {
 
 .owl-prev {
   left: 10px;
+  position: absolute;
+  font-size: 30px;
+  bottom: 350px;
 }
 
 .owl-next {
   right: 100px;
+  position: absolute;
+  font-size: 30px;
+  bottom: 350px;
 }
 
 .recipes {
   background-color: rgb(238, 238, 238);
   padding: 2%;
+  padding-bottom: 7%;
 }
 .recipes h1 {
   padding: 5% 0 0 5%;
@@ -504,6 +526,25 @@ header {
 .recipes .recipe-container .recipe-item .properties div p {
   margin: 5%;
   min-width: fit-content;
+}
+
+.leaf2 {
+  position: absolute;
+}
+.leaf2 img {
+  position: absolute;
+  top: 800px;
+  left: -50px;
+}
+
+.chickpeas {
+  position: absolute;
+}
+.chickpeas img {
+  position: absolute;
+  top: 920px;
+  width: 32vw;
+  left: 850px;
 }
 
 .presence {

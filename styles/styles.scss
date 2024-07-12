@@ -311,6 +311,7 @@ header {
   width: 100vw;
   height: fit-content;
   margin-top: 0;
+  padding-bottom: 5%;
 
   h1 {
     padding: 5% 0 0 5%;
@@ -346,17 +347,31 @@ header {
   }
 }
 
+.leaf1 {
+  position: absolute;
+  width: 100%;
+  justify-content: right;
+  img {
+    position: absolute;
+    right: 0;
+    top: 490px;
+    width: 12%;
+    z-index: 0;
+  }
+}
 
 .owl-carousel {
   padding: 2% 2% 0 2%;
   width: 80%;
   overflow: hidden;
   vertical-align: top;
+
   .item {
     box-shadow: 0 8px 19px 0 rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     width: 80%;
+    height: 540px;
 
     img {
       height: 198px;
@@ -411,25 +426,31 @@ header {
 
 .owl-prev,
 .owl-next {
-  background-image:url(../images/arrow-left.svg);
+  background-image: url(../images/arrow-left.svg);
   background-color: $theme-color-dark; /* Button background color */
   padding: 10px;
   border-radius: 50%; /* Make them circular */
   position: absolute;
-
 }
 
 .owl-prev {
   left: 10px;
+  position: absolute;
+  font-size: 30px;
+  bottom: 350px;
 }
 
 .owl-next {
   right: 100px;
+  position: absolute;
+  font-size: 30px;
+  bottom: 350px;
 }
 
 .recipes {
   background-color: $grey-bg;
   padding: 2%;
+  padding-bottom: 7%;
   h1 {
     padding: 5% 0 0 5%;
     font-size: 50px;
@@ -568,6 +589,24 @@ header {
   }
 }
 
+.leaf2 {
+  position: absolute;
+  img {
+    position: absolute;
+    top: 800px;
+    left: -50px;
+  }
+}
+
+.chickpeas {
+  position: absolute;
+  img {
+    position: absolute;
+    top: 920px;
+    width: 32vw;
+    left: 850px;
+  }
+}
 .presence {
   background-color: white;
   padding: 7% 0%;
