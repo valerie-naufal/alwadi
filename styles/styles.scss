@@ -1,7 +1,7 @@
 $theme-color: #00a651;
 $theme-color-dark: #0c892e;
 $theme-font: "Poppins";
-$grey-bg: rgb(247, 244, 244);
+$grey-bg: #f6f6f6;
 
 body {
   font-family: $theme-font;
@@ -633,6 +633,7 @@ header {
     left: 850px;
   }
 }
+
 .presence {
   background-color: white;
   padding: 7% 0%;
