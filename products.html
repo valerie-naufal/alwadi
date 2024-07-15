@@ -4,8 +4,208 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products | Al Wadi Al Akhdar</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/products-style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
   </head>
   <body>
-    hello world
+    <header>
+      <div class="navbar">
+        <div class="navbar-container">
+          <div class="left">
+            <img src="images/alwadiLogo.svg" />
+          </div>
+          <div class="right">
+            <a>About Us</a>
+            <a>Prodcuts</a>
+            <a>Recipes</a>
+            <a>Our Partners</a>
+            <a>Visit Lebanon</a>
+            <a>Contact</a>
+            <a>Online Stores</a>
+            <div class="lang">
+              <img src="images/globe-black.svg" />
+              <select name="language" id="language">
+                <option value="english">EN</option>
+                <option value="arabic">AR</option>
+                <option value="french">FR</option>
+              </select>
+            </div>
+            <div class="search-container">
+              <a onclick="openSearch(event)">Search</a
+              ><img src="images/search-black.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-page" id="search-page">
+      <div class="close-img">
+        <img onclick="closeSearch(event)" src="images/close.svg" />
+      </div>
+      <div class="search-bar"><input type="text" value="Search" /></div>
+    </div>
+
+    <section class="main-banner">
+      <div><img src="images/subBannerImage.jpg" class="bg-container" /></div>
+      <div class="text1">
+        <p>Products</p>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="search-div">
+        <div class="search-holder">
+          <form action="POST">
+            <input type="text" value="Search for a specific product" />
+          </form>
+          <img src="images/search-black.svg" />
+        </div>
+        <div class="search-right">
+          <a>FILTER</a>
+          <img src="images/filter.svg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h1>Categories</h1>
+      <div class="owl-carousel">
+        <div class="item">
+          <img src="images/frozenVeggies.jpg" />
+          <div class="category-name">
+            <p>Frozen Vegetables</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/lebaneseSpecialties.jpg" />
+          <div class="category-name">
+            <p>Lebanese Specialities</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/halawa.jpg" />
+          <div class="category-name">
+            <p>Halawa & Tahina</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/cannedVeggies.jpg" />
+          <div class="category-name">
+            <p>Canned Vegetables</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/specialtyPickles.jpg" />
+          <div class="category-name">
+            <p>Specialty Pickles</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/tomatoSpecialties.jpg" />
+          <div class="category-name">
+            <p>Tomato Specialties</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/condiments.jpg" />
+          <div class="category-name">
+            <p>COndiments</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/molasses.jpg" />
+          <div class="category-name">
+            <p>Molasses</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/floralWaters.jpg" />
+          <div class="category-name">
+            <p>Lebanese Floral Waters</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/jams.jpg" />
+          <div class="category-name">
+            <p>Jams</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/dairies.jpg" />
+          <div class="category-name">
+            <p>Dairies</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/chilledRange.jpg" />
+          <div class="category-name">
+            <p>Al Wadi Chilled Range</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/pulses.jpg" />
+          <div class="category-name">
+            <p>Pulses</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/organicFrozen.jpg" />
+          <div class="category-name">
+            <p>Organic Frozen Vegetables</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-more"><a>View ALL</a></div>
+    </section>
+
+    <script>
+      function openSearch(event) {
+        $(".search-page").fadeIn();
+      }
+
+      function closeSearch(event) {
+        $(".search-page").fadeOut();
+      }
+
+      function openVideo(event) {
+        $(".video-page").show();
+      }
+
+      function closeVideo(event) {
+        $(".video-page").hide();
+      }
+    </script>
   </body>
 </html>
