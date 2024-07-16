@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Commitment | Al Wadi Al Akhdar</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/commit-style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="scripts/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="navbar-container">
+          <div class="left">
+            <img src="images/alwadiLogo.svg" />
+          </div>
+          <div class="right">
+            <a>About Us</a>
+            <a>Prodcuts</a>
+            <a>Recipes</a>
+            <a>Our Partners</a>
+            <a>Visit Lebanon</a>
+            <a>Contact</a>
+            <a>Online Stores</a>
+            <div class="lang">
+              <img src="images/globe-black.svg" />
+              <select name="language" id="language">
+                <option value="english">EN</option>
+                <option value="arabic">AR</option>
+                <option value="french">FR</option>
+              </select>
+            </div>
+            <div class="search-container">
+              <a onclick="openSearch(event)">Search</a
+              ><img src="images/search-black.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-page" id="search-page">
+      <div class="close-img">
+        <img onclick="closeSearch(event)" src="images/close.svg" />
+      </div>
+      <div class="search-bar"><input type="text" value="Search" /></div>
+    </div>
+
+    <section class="main-banner">
+      <p>Our Commitment</p>
+    </section>
+
+    <section class="first-paragraph">
+      <p>
+        Al Wadi is a trusted Lebanese food expert with a long legacy in the
+        Lebanese market. Today, our name has become synonymous with Lebanese
+        cuisine. <br /><br />
+        Born out of a love for our culinary heritage, we have established
+        ourselves as experts in the Lebanese table. <br /><br />
+        Our products are prepared using the finest ingredients, the highest food
+        standards, and the best and latest technologies to ensure top quality
+        and safety. <br /><br />
+        As a fierce leader in the Lebanese market, we aim to gain equity
+        strength and more recognition within the food industry regionally and
+        internationally.
+      </p>
+    </section>
+
+    <section class="quality-section">
+      <div class="big-container">
+        <div class="left1">
+          <h1>Leading in quality</h1>
+          <h3>
+            Quality and consistency are the cornerstones of Al Wadi Al Akhdar’s
+            success. We follow the highest standards across every single product
+            we buy. We prepare our food with love and care, just as you would at
+            home. We combine the latest food technology with the traditional
+            secrets that go into making superior and exquisite food preparations
+            for you to enjoy, again and again.
+          </h3>
+          <div class="properties">
+            <div class="element">
+              <img src="images/commit1a.svg" />
+              <p>
+                Continuously emphasize the quality and safety of our products
+              </p>
+            </div>
+            <div class="element">
+              <img src="images/commit1b.svg" />
+              <p>Meet our customer’s expectations and satisfaction</p>
+            </div>
+            <div class="element">
+              <img src="images/commit1c.svg" />
+              <p>Exceed national and international requirements</p>
+            </div>
+          </div>
+        </div>
+        <div class="right1">
+          <img src="images/pic1.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="work-with-us">
+      <div class="work">
+        <h1>Work with us</h1>
+        <p>Are you a talented candidate and want to work with us?</p>
+        <a>Apply Here</a>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="img-dv"><img src="images/alwadiLogo.svg" /></div>
+      <div class="text-container1">
+        <a>About Us</a>
+        <a>Products</a>
+        <a>Recipes</a>
+      </div>
+      <div class="text-container2">
+        <a>Our Partners</a>
+        <a>Visit Lebanon</a>
+        <a>Online Stores</a>
+      </div>
+      <div class="text-container3">
+        <a>Contact</a>
+        <a>Careers</a>
+      </div>
+      <div class="media">
+        <button>
+          <div class="button-content">
+            <label>dowload catalogue</label>
+            <img src="images/download.svg" />
+          </div>
+        </button>
+        <div class="icons">
+          <a href="https://www.facebook.com/AlWadiAlAkhdarLB" target="_blank"
+            ><img src="images/facebook.svg"
+          /></a>
+          <a
+            href="https://www.linkedin.com/company/al-wadi-al-akhdar-sal/"
+            target="_blank"
+            ><img src="images/linkedin.svg"
+          /></a>
+          <a href="https://www.youtube.com/user/AlWadiAlAkhdar" target="_blank"
+            ><img src="images/youtube.svg"
+          /></a>
+          <a href="https://www.instagram.com/alwadialakhdar/" target="_blank"
+            ><img src="images/instagram.svg"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="post-footer">
+      <p>Copyright 2024. Al Wadi Al Akhdar</p>
+      <a> Terms & Conditions </a>
+      <a> Privacy Policy</a>
+    </section>
+    <script>
+      function openSearch(event) {
+        $(".search-page").fadeIn();
+      }
+
+      function closeSearch(event) {
+        $(".search-page").fadeOut();
+      }
+    </script>
+  </body>
+</html>
