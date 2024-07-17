@@ -498,6 +498,7 @@ header {
   margin: 0.5%;
   width: 30%;
   min-height: 545px;
+  overflow: hidden;
 }
 .recipes .recipe-container .recipe-item img:hover {
   transform: scale(1.02);
