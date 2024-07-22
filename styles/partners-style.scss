@@ -112,6 +112,15 @@ header {
       color: green;
       font-size: 25px;
     }
+
+    input:focus {
+      outline: none;
+    }
+
+    input::placeholder {
+      opacity: 0.85;
+      color: green;
+    }
   }
 }
 
@@ -196,7 +205,7 @@ header {
     border-radius: 30px;
     padding: 1% 5%;
     cursor: pointer;
-    margin-top:3%;
+    margin-top: 3%;
   }
 
   .load-btn:hover {
@@ -213,7 +222,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  display:none;
+  display: none;
 
   .main-container {
     max-width: calc(100% - 200px);
@@ -262,7 +271,7 @@ header {
     border-radius: 30px;
     padding: 1% 5%;
     cursor: pointer;
-    margin-top:3%;
+    margin-top: 3%;
   }
 
   .load-btn:hover {

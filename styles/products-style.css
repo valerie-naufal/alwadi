@@ -99,6 +99,13 @@ header {
   color: green;
   font-size: 25px;
 }
+.search-page .search-bar input:focus {
+  outline: none;
+}
+.search-page .search-bar input::placeholder {
+  opacity: 0.85;
+  color: green;
+}
 
 .main-banner {
   background-color: rgba(0, 0, 0, 0.3);
