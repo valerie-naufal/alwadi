@@ -199,6 +199,78 @@ header {
   }
 }
 
+.guarantee-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .big-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    padding-bottom: 5%;
+
+    .left2 {
+      width: 45%;
+      padding-left: 10%;
+
+      p {
+        color: #1d1f24;
+        width: 100%;
+        border-bottom: 1px solid #dadada;
+        padding: 2%;
+      }
+    }
+
+    .right2 {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.rd-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .big-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    padding-bottom: 5%;
+
+    .left2 {
+      width: 45%;
+      h3 {
+        color: #1d1f24;
+        font-size: 18px;
+        margin: 0 0 40px;
+        font-weight: normal;
+      }
+
+      p {
+        color: #1d1f24;
+        width: 100%;
+        border-bottom: 1px solid #dadada;
+        padding: 2%;
+      }
+    }
+
+    .right2 {
+      padding-left: 10%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 .work-with-us {
   width: 100%;
   height: 100%;
