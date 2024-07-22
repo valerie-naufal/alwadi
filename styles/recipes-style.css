@@ -472,24 +472,37 @@ header {
   text-align: center;
   margin-bottom: 30px;
 }
-.create .submit-btn {
+
+.submit-div {
+  padding: 0 35%;
+}
+
+.submit-btn {
   display: flex;
   align-items: center;
-  box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 30px;
-  max-width: fit-content;
-  justify-content: center;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  background-color: white;
+  border: 1px solid white;
+  cursor: pointer;
 }
-.create .submit-btn img {
+.submit-btn img {
   width: 16px;
   height: 16px;
+  margin-left: 5%;
 }
-.create .submit-btn a {
+.submit-btn a {
+  font-size: 14px;
+  line-height: 14px;
   color: #0c892e;
   text-transform: uppercase;
-  font-weight: bold;
-  margin: 0 10%;
-  min-width: fit-content;
+  font-weight: 600;
+  padding: 9px 16px;
+}
+
+.submit-btn:hover {
+  transform: translateY(2px);
+  transition: transform 0.5s;
 }
 
 .work-with-us {

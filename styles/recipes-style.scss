@@ -529,30 +529,41 @@ header {
       margin-bottom: 30px;
     }
   }
+}
 
-  .submit-btn{
-    display:flex;
-    align-items: center;
-    box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.08);
-    border-radius:30px;
-    max-width: fit-content;
-    justify-content: center;
+.submit-div {
+  padding: 0 35%;
+}
 
-    img{
-        width:16px;
-        height:16px;
-    }
+.submit-btn {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  background-color: white;
+  border: 1px solid white;
+  cursor: pointer;
 
-    a{
-        color:$theme-color-dark;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin: 0 10%;
-        min-width:fit-content;
-    }
+  img {
+    width: 16px;
+    height: 16px;
+    margin-left: 5%;
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 14px;
+    color: $theme-color-dark;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 9px 16px;
   }
 }
 
+.submit-btn:hover {
+  transform: translateY(2px);
+  transition: transform 0.5s;
+}
 
 .work-with-us {
   width: 100%;
