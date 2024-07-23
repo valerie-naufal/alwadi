@@ -106,6 +106,41 @@ header {
   color: green;
 }
 
+.sub-nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-top: 1px solid #dadada;
+}
+.sub-nav .sub-nav-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 75%;
+}
+.sub-nav .sub-nav-container a {
+  opacity: 0.8;
+  font-size: 20px;
+  padding: 30px 0;
+  cursor: pointer;
+}
+.sub-nav .sub-nav-container a:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.sub-nav .sub-nav-container a.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 10px;
+  transform: translateX(1200%);
+  border-top: 0 solid #fff;
+  border-right: 10px solid #fff;
+  border-left: 10px solid #fff;
+  border-bottom: 10px solid #0c892e;
+}
+
 .main-banner {
   background-color: #0c892e;
 }
