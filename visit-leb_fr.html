@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiter le Liban | Al Wadi Al Akhdar</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="styles/visit-style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="scripts/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="navbar-container">
+          <div class="left"><img src="images/alwadiLogo.svg"></div>
+          <div class="right"><a> À propos de nous </a>
+ <a> Produits </a>
+ <a> Recettes </a>
+ <a> Nos partenaires </a>
+ <a> Visitez le Liban </a>
+ <a> Contacter </a>
+ <a> Boutiques en ligne </a><div class="lang"><img src="images/globe.svg"><select name="language" id="language">
+                <option value="english">EN</option>
+                <option value="arabic">AR</option>
+                <option value="french">FR</option>
+              </select>
+            </div>
+            <div class="search-container"><a onclick="openSearch(event)"> Rechercher </a> <img src="images/search.svg"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="search-page" id="search-page">
+      <div class="close-img"><img onclick="closeSearch(event)" src="images/close.svg"></div>
+      <div class="search-bar"><input type="text" placeholder="Rechercher"></div>
+    </section>
+
+    <section class="main-banner">
+      <div><img src="images/lebanonView.jpg" class="bg-container"></div>
+      <div class="text1">
+        <h1>Visiter le Liban</h1>
+        <p>Délicieuse, copieuse et savoureuse : la gastronomie libanaise en trois mots.</p>
+        <div class="story"><a onclick="openVideo(event)"> Regarder la vidéo </a>
+ <img src="images/play.svg"></div>
+      </div>
+    </section>
+
+    <section class="video-page" id="video-page"><span onclick="closeVideo(event)"> × </span><iframe width="560" height="315" src="https://www.youtube.com/embed/CF1J34YiAYU?si=rIs2R4e1L1CRzYLJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section class="articles">
+      <div class="container">
+        <h1>Articles</h1>
+        <div class="owl-carousel owl-three">
+          <div class="item"><img src="images/437Image.jpg"><div class="category-name">
+              <p>Visiter la Méditerranée</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/438Image.JPG"><div class="category-name">
+              <p></p>
+            </div>
+          </div>
+          <div class="item"><img src="images/439Image.JPG"><div class="category-name">
+              <p>Cinq repas pour un ramadan plus sain</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/440Image.jpg"><div class="category-name">
+              <p>Comment organiser une soirée à thème libanais</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/441Image.jpg"><div class="category-name">
+              <p>Manger libanais, restez végétarien</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/442Image.jpg"><div class="category-name">
+              <p>Traditions de Pâques au Liban</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/443Image.JPG"><div class="category-name">
+              <p>La cuisine libanaise : le paradis des végétariens</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/444Image.JPG"><div class="category-name">
+              <p>L'huile d'olive</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/445Image.JPG"><div class="category-name">
+              <p>visiter le Liban avec ses fameux mezze</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-more"><a> Afficher TOUT </a></div>
+    </section>
+
+    <section class="history">
+      <div class="container">
+        <h1>Histoire de la cuisine libanaise</h1>
+        <div class="owl-carousel owl-three">
+          <div class="item"><img src="images/412Image.jpg"><div class="category-name">
+              <p>Le bon café blanc libanais</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/413Image.jpg"><div class="category-name">
+              <p>Aubergine aux accents méditerranéens !</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/415Image.JPG"><div class="category-name">
+              <p>un délice de Méditerranée orientale à la caroube !</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/416Image.jpg"><div class="category-name">
+              <p>Coriandre : le secret d'une cuisine savoureuse</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/417Image.jpg"><div class="category-name">
+              <p>L’olive</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/418Image.jpg"><div class="category-name">
+              <p>4 façons de manger du houmous auxquelles vous n’avez jamais pensé</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/419Image.jpg"><div class="category-name">
+              <p>Ajoutez un goût de Beyrouth à votre cuisine avec le tahina !</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/420Image.jpg"><div class="category-name">
+              <p>Falafel : le roi de la cuisine de rue</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/421Image.jpg"><div class="category-name">
+              <p>la cuisine libanaise : parfaitement saine !</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-more"><a> Afficher TOUT </a></div>
+    </section>
+
+    <section class="regional">
+      <div class="container">
+        <h1>Spécialités par région</h1>
+        <div class="owl-carousel owl-three region">
+          <div class="item"><img src="images/447Image.jpg"><div class="category-name">
+              <h4>Douma</h4>
+              <p>laban immo (yaourt cuit et agneau avec riz)</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/448Image.jpg"><div class="category-name">
+              <h4>Hammana</h4>
+              <p>Fasoulya hammanieh (ragoût de haricots rouges)</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/449Image.JPG"><div class="category-name">
+              <h4>Kfarmeshki</h4>
+              <p>kebbeh bil-kishk (viande mélangée à du blé et du yaourt)</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/450Image.jpg"><div class="category-name">
+                <h4>Baskinta</h4>
+              <p>makhouta (riz et noix)</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/451Image.jpg"><div class="category-name">
+                <h4>Tripoli, El Mina</h4>
+              <p>samkeh harra (poisson épicé avec sauce tahina)</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/452Image.jpg"><div class="category-name">
+                <h4>broummana</h4>
+              <p>deleh mehshi (cage thoracique d'agneau farcie)</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/453Image.jpg"><div class="category-name">
+                <h4>baino</h4>
+              <p>Kebbeh et Lahme bil-khal (viande mélangée à du blé concassé et à de la viande trempée dans du vinaigre)</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/454Image.jpg"><div class="category-name">
+                <h4>Dhour Choueir</h4>
+              <p>shish barak (boules de pâtisserie fourrées à la viande et au yaourt)</p>
+            </div>
+          </div>
+          <div class="item"><img src="images/421Image.jpg"><div class="category-name">
+                <h4>Ehden</h4>
+              <p>kebbeh zghertewieyh (viande et blé concassé)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-more"><a> Afficher TOUT </a></div>
+    </section>
+
+    <section class="work-with-us">
+      <div class="work">
+        <h1>Travailler avec nous</h1>
+        <p>Vous êtes un candidat talentueux et souhaitez travailler avec nous ?</p><a> Postulez ici </a></div>
+    </section>
+
+    <section class="footer">
+      <div class="img-dv"><img src="images/alwadiLogo.svg"></div>
+      <div class="text-container1"><a> À propos de nous </a>
+ <a> Produits </a>
+ <a> Recettes </a></div>
+      <div class="text-container2"><a> Nos partenaires </a>
+ <a> Visitez le Liban </a>
+ <a> Boutiques en ligne </a></div>
+      <div class="text-container3"><a> Contacter </a>
+ <a> Carrières </a></div>
+      <div class="media">
+        <button>
+          <div class="button-content">
+            <p>télécharger le catalogue</p><img src="images/download.svg"></div>
+        </button>
+        <div class="icons"><a href="https://www.facebook.com/AlWadiAlAkhdarLB" target="_blank"> <img src="images/facebook.svg"> </a>
+ <a href="https://www.linkedin.com/company/al-wadi-al-akhdar-sal/" target="_blank"> <img src="images/linkedin.svg"> </a>
+ <a href="https://www.youtube.com/user/AlWadiAlAkhdar" target="_blank"> <img src="images/youtube.svg"> </a>
+ <a href="https://www.instagram.com/alwadialakhdar/" target="_blank"> <img src="images/instagram.svg"> </a></div>
+      </div>
+    </section>
+
+    <section class="post-footer">
+      <p>Copyright 2024. Al Wadi Al Akhdar</p><a> Termes et conditions </a>
+      <a> politique de confidentialité</a></section>
+    <script>
+      function openSearch(event) {
+        $(".search-page").fadeIn();
+      }
+
+      function closeSearch(event) {
+        $(".search-page").fadeOut();
+      }
+
+      function openVideo(event) {
+        $(".video-page").show();
+      }
+
+      function closeVideo(event) {
+        $(".video-page").hide();
+      }
+    </script>
+  </body>
+</html>
