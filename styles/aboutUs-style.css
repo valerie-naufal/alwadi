@@ -155,7 +155,7 @@ header {
   position: absolute;
   bottom: 0;
   height: 10px;
-  transform: translateX(100%);
+  transform: translateX(150%);
   border-top: 0 solid #fff;
   border-right: 10px solid #fff;
   border-left: 10px solid #fff;
@@ -189,43 +189,42 @@ header {
   text-align: left;
 }
 
-.quality-section {
+.date-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.quality-section .big-container {
+.date-section .big-container {
   display: flex;
   flex-direction: row;
-  width: 80%;
-  justify-content: space-around;
-  padding-bottom: 5%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 5%;
 }
-.quality-section .big-container .left1 {
-  width: 45%;
+.date-section .big-container .left1 {
+  width: 37%;
 }
-.quality-section .big-container .left1 h3 {
+.date-section .big-container .left1 h1 {
   color: #1d1f24;
-  font-size: 18px;
+  font-size: 65px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 70px;
+  text-align: left;
+  margin-bottom: 38px;
+}
+.date-section .big-container .left1 h3 {
+  width: 80%;
+  color: #1d1f24;
+  font-size: 16px;
   margin: 0 0 40px;
   font-weight: normal;
 }
-.quality-section .big-container .left1 .properties .element {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-bottom: 1px solid #dadada;
-  padding: 2%;
-}
-.quality-section .big-container .left1 .properties .element img {
-  width: 52px;
-  height: 52px;
-  margin-right: 28px;
-}
-.quality-section .big-container .right1 img {
-  width: 100%;
-  padding-left: 10%;
+.date-section .big-container .right1 img {
+  width: 80%;
+  padding-right: 10%;
 }
 
 .work-with-us {
