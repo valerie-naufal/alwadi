@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers | Al Wadi Al Akhdar</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/careers-style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="scripts/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="navbar-container">
+          <div class="left">
+            <img src="images/alwadiLogo.svg" />
+          </div>
+          <div class="right">
+            <a>About Us</a>
+            <a>Prodcuts</a>
+            <a>Recipes</a>
+            <a>Our Partners</a>
+            <a>Visit Lebanon</a>
+            <a>Contact</a>
+            <a>Online Stores</a>
+            <div class="lang">
+              <img src="images/globe-black.svg" />
+              <select name="language" id="language">
+                <option value="english">EN</option>
+                <option value="arabic">AR</option>
+                <option value="french">FR</option>
+              </select>
+            </div>
+            <div class="search-container">
+              <a onclick="openSearch(event)">Search</a
+              ><img src="images/search-black.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-page" id="search-page">
+      <div class="close-img">
+        <img onclick="closeSearch(event)" src="images/close.svg" />
+      </div>
+      <div class="search-bar"><input type="text" placeholder="Search" /></div>
+    </div>
+
+    <section class="sub-nav">
+      <div class="sub-nav-container">
+        <a class="active"> Our Story</a>
+        <a>Our Commitment</a>
+        <a>CSR</a>
+        <a>Meet The Team</a>
+        <a>Our Presence</a>
+        <a>Careers</a>
+      </div>
+    </section>
+
+    <section class="main-banner">
+      <p>Careers</p>
+    </section>
+
+    <section class="first-paragraph">
+      <p>
+        Al Wadi Al Akhdar is the number one food brand in Lebanon and a leading
+        Lebanese food brand worldwide with a strong presence in 20 countries. <br>
+        We look for highly rigorous candidates, with proven experience in the
+        field. To apply, we expect you to have a track record showing rigor and
+        passion for the highest quality standards. <br> Al Wadi Al Akhdar is an equal
+        opportunity employer. All qualified applicants will receive
+        consideration for employment without regard to race, color, religion,
+        gender, national origin, disability, age, or any other characteristic.
+      </p>
+    </section>
+
+    <section class="positions">
+        <div class="container">
+            <h1>Current Positions</h1>
+        </div>
+    </section>
+
+    <section class="work-with-us">
+      <div class="work">
+        <h1>Did not find the job you are looking for?</h1>
+        <p>Apply now for future vacancies.</p>
+        <a>Apply Here</a>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="img-dv"><img src="images/alwadiLogo.svg" /></div>
+      <div class="text-container1">
+        <a>About Us</a>
+        <a>Products</a>
+        <a>Recipes</a>
+      </div>
+      <div class="text-container2">
+        <a>Our Partners</a>
+        <a>Visit Lebanon</a>
+        <a>Online Stores</a>
+      </div>
+      <div class="text-container3">
+        <a>Contact</a>
+        <a>Careers</a>
+      </div>
+      <div class="media">
+        <button>
+          <div class="button-content">
+            <label>dowload catalogue</label>
+            <img src="images/download.svg" />
+          </div>
+        </button>
+        <div class="icons">
+          <a href="https://www.facebook.com/AlWadiAlAkhdarLB" target="_blank"
+            ><img src="images/facebook.svg"
+          /></a>
+          <a
+            href="https://www.linkedin.com/company/al-wadi-al-akhdar-sal/"
+            target="_blank"
+            ><img src="images/linkedin.svg"
+          /></a>
+          <a href="https://www.youtube.com/user/AlWadiAlAkhdar" target="_blank"
+            ><img src="images/youtube.svg"
+          /></a>
+          <a href="https://www.instagram.com/alwadialakhdar/" target="_blank"
+            ><img src="images/instagram.svg"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="post-footer">
+      <p>Copyright 2024. Al Wadi Al Akhdar</p>
+      <a> Terms & Conditions </a>
+      <a> Privacy Policy</a>
+    </section>
+    <script>
+      function openSearch(event) {
+        $(".search-page").fadeIn();
+      }
+
+      function closeSearch(event) {
+        $(".search-page").fadeOut();
+      }
+    </script>
+  </body>
+</html>
